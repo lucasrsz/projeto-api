@@ -1,9 +1,9 @@
 const { DataTypes, Model } = require('sequelize');
 const sequelize = require('../config/sequelize');
 
-class Usuario extends Model {}
+class Curso extends Model {}
 
-Usuario.init({
+Curso.init({
   id: {
     type: DataTypes.INTEGER,
     primaryKey: true
@@ -12,16 +12,9 @@ Usuario.init({
     type: DataTypes.STRING,
     allowNull: false
   },
-  email: {
-    type: DataTypes.STRING,
-    validate: {
-      isEmail: true
-    }
-  },
 }, {
-  
-  sequelize, 
-  modelName: 'Usuario'
+  sequelize,
+  modelName: 'Curso'
 });
 
-module.exports = Usuario;
+module.exports = Curso;

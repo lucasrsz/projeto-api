@@ -6,9 +6,14 @@ class Usuario extends Model {}
 Usuario.init({
   id: {
     type: DataTypes.INTEGER,
-    primaryKey: true
+    primaryKey: true,
+    autoIncrement: true
   },
   nome: {
+    type: DataTypes.STRING,
+    allowNull: false
+  },
+  senha: {
     type: DataTypes.STRING,
     allowNull: false
   },
@@ -18,6 +23,18 @@ Usuario.init({
       isEmail: true
     }
   },
+  dataNascimento: {
+    type: DataTypes.DATE,
+    allowNull: false
+  },
+  cpf: {
+    type: DataTypes.STRING,
+    allowNull: false
+  },
+  telefone: {
+    type: DataTypes.STRING,
+    allowNull: false
+  }
 }, {
   
   sequelize, 

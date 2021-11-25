@@ -34,6 +34,10 @@ Usuario.init({
   telefone: {
     type: DataTypes.STRING,
     allowNull: false
+  },
+  administrador: {
+    type: DataTypes.BOOLEAN,
+    defaultValue: false
   }
 }, {
   
